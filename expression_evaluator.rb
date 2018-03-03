@@ -4,6 +4,7 @@ class ExpressionEvaluator
     sum = 0
     char_array = string.split
     char_array.each_with_index do |char, i|
+      sum += char.to_i
       next unless char == '-' && char_array[i + 2]
       if char_array[i + 2].to_i == 0
         char_array[i + 1] = char + char_array[i + 1]
@@ -11,8 +12,6 @@ class ExpressionEvaluator
         char_array[i + 2] = char + char_array[i + 2]
       end
     end
-    char_array.map(&:to_i).reduce(&:+)
+    sum
   end
 end
-
-
