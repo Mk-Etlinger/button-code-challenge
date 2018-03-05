@@ -11,6 +11,6 @@ class ExpressionEvaluator
     
   def self.simple_sum(string)
     return 0 if string.empty?
-    string.gsub('- ', '-').split.map(&:to_i).reduce(&:+)
+    string.gsub('- ', '-').split.inject(0) { |sum, num| sum + num.to_i }
   end
 end
