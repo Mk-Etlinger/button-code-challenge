@@ -31,7 +31,8 @@ We can see than in the second example where `- 1 - 2 3` would be written as `-1 
 
 My brute force implementation looked like this:
 
-```def self.parse(string)
+```ruby
+def self.parse(string)
     sum = 0
     char_array = string.split
     char_array.each_with_index do |char, i|
