@@ -26,6 +26,10 @@ class ExpressionEvaluatorTest < Minitest::Test
         assert_equal 15, ExpressionEvaluator.parse('+ 8 - 9 6 + 1 - 4 1')
     end
 
+    def test_parses_long_nested_alt_expression
+        assert_equal 12, ExpressionEvaluator.parse('- 7 6 + 1 1 - 4 1 + 4 2')
+    end
+
     def test_parses_super_long_nested_expression
         assert_equal -1, ExpressionEvaluator.parse('- 5 - 3 1 + 1 + 4 1 - 1 + 1 1 - 1 - 2 6')
     end    
