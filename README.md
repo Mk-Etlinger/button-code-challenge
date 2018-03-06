@@ -46,7 +46,8 @@ def self.parse(string)
     end
     sum
     end
-end```
+end
+```
 
 As you can see it's pretty verbose so I tried a little something different thinking that since it's a pattern, Regex would be able to help pick that out rather easily.
 
