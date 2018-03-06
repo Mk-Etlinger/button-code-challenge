@@ -11,7 +11,7 @@ See below to run test suite
 1. Tests written in `expression_evaluator_test.rb`
 1. Add more to satisfy other test cases
 
-## Approach
+### Approach
 
 Hi guys, here's my Button Software Eng. Intern Code Challenge Submission
 
