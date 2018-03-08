@@ -22,6 +22,14 @@ class ExpressionEvaluatorTest < Minitest::Test
         assert_equal -1, ExpressionEvaluator.parse('- 6 - 9 4')
     end
 
+    def test_parses_large_nested_expression
+        assert_equal 800, ExpressionEvaluator.parse('- 60 - 900 40')
+    end
+
+    def test_parses_larger_nested_expression
+        assert_equal 900, ExpressionEvaluator.parse('- 60 - 900 40 + 100 - 50 50')
+    end
+
     def test_parses_long_nested_expression
         assert_equal 15, ExpressionEvaluator.parse('+ 8 - 9 6 + 1 - 4 1')
     end
