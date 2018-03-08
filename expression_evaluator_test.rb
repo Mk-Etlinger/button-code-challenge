@@ -2,6 +2,10 @@ require 'minitest/autorun'
 require_relative './expression_evaluator'
 
 class ExpressionEvaluatorTest < Minitest::Test
+    def test_parses_neg_number
+        assert_equal -2, ExpressionEvaluator.parse('- 2')
+    end
+
     def test_parses_easy_expression
         assert_equal 5, ExpressionEvaluator.parse('+ 2 3')
     end
