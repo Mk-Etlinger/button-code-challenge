@@ -1,4 +1,3 @@
-require 'pry'
 class ExpressionEvaluator
   def self.parse(string)
     complex_exps = string.scan(/-\s\d+\s\d+/)
